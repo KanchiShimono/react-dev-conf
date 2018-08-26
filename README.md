@@ -49,6 +49,9 @@ module.exports = {
   entry: {
     app: path.resolve(__dirname, './src/index.jsx'),
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
@@ -113,6 +116,9 @@ module.exports = {
     "extends": [
         "airbnb"
     ],
+    "globals": {
+        "document": true
+    },
     "parser": "babel-eslint",
     "rules": {
         "react/jsx-filename-extension": [
